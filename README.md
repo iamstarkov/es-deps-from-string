@@ -5,7 +5,7 @@
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
-> ECMAScript 6 modules imports array from string, static CommonJS requires as well
+> ECMAScript 2015+ dependencies array from string (es2015 modules imports/static CommonJS requires)
 
 ## Install
 

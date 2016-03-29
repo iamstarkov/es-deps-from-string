@@ -1,7 +1,7 @@
 {
   "name": "es-deps-from-string",
   "version": "0.0.0",
-  "description": "ECMAScript 6 modules imports array from string, static CommonJS requires as well",
+  "description": "ECMAScript 2015+ dependencies array from string (es2015 modules imports/static CommonJS requires)",
   "main": "index.es5.js",
   "files": [
     "index.es5.js"
