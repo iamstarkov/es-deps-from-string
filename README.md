@@ -7,6 +7,9 @@
 
 > ECMAScript 2015+ dependencies array from string (es2015 modules imports/static CommonJS requires)
 
+This package handles es2015+ modules, and 'cause CommonJS won't go away anytime soon, it also
+takes care of non-dynamic `require`s.
+
 ## Install
 
     npm install --save es-deps-from-string
@@ -16,28 +19,41 @@
 ```js
 import esDepsFromString from 'es-deps-from-string';
 
-esDepsFromString('unicorns'); // unicorns
+const input = `
+// es2015+ modules
+import out from 'out';
+import local from './local';
+
+console.log('modules');
+
+// CommonJS modules
+var qName = require('q');
+var fsName = require('fs');
+var localName = require('./local-cjs');
+var n = 1;
+
+require('yo' + 1); // dynamic requires wont work
+
+require('globalImport');
+
+console.log('cjs');`;
+
+esDepsFromString(input); /* [
+  'out', './local',
+  'q', 'fs', './local-cjs', 'globalImport',
+] */
 ```
 
 ## API
 
-### esDepsFromString(input, [options])
+### esDepsFromString(input)
 
 #### input
 
 *Required*  
 Type: `String`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+Your JavaScript code.
 
 ## License
 
