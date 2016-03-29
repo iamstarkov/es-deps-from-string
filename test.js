@@ -11,7 +11,7 @@ console.log('modules');
 // CommonJS modules
 var qName = require('q');
 var fsName = require('fs');
-var localName = require('./local');
+var localName = require('./local-cjs');
 var n = 1;
 
 require('yo' + 1); // dynamic requires wont work
@@ -22,7 +22,7 @@ console.log('cjs');`;
 
 const expected = [
   'out', './local',
-  'q', 'fs', 'globalImport',
+  'q', 'fs', './local-cjs', 'globalImport',
 ];
 
 test('should esDepsFromString', t =>
