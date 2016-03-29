@@ -48,12 +48,20 @@ esDepsFromString(input); /* [
 
 ### esDepsFromString(input)
 
+    // esDepsFromString :: String -> Array[String]
+
 #### input
 
 *Required*  
 Type: `String`
 
 Your JavaScript code.
+
+## Related
+
+* [es-deps][from-file] same but for file
+
+[from-file]: https://github.com/iamstarkov/es-deps
 
 ## License
 
