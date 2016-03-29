@@ -5,7 +5,7 @@
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
-> ECMAScript 2015+ dependencies array from string (es2015 modules imports/static CommonJS requires)
+> ECMAScript 2015+/CommonJS module dependencies array from string
 
 This package handles es2015+ modules, and 'cause CommonJS won't go away anytime soon, it also
 takes care of non-dynamic `require`s.
