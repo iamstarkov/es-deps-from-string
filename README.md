@@ -59,9 +59,13 @@ Your JavaScript code.
 
 ## Related
 
-* [es-deps][from-file] same but for file
+* [es-deps][es-deps] — ECMAScript 2015+/CommonJS module dependencies array
+* [es-deps-resolved][es-deps-resolved] — ECMAScript 2015+/CommonJS module dependencies resolved array
+* [es-dep-unit][es-dep-unit] — Constructor for ECMAScript 2015+/CommonJS dependency unit `Object { requested, from, resolved }`
 
-[from-file]: https://github.com/iamstarkov/es-deps
+[es-deps]: https://github.com/iamstarkov/es-deps
+[es-deps-resolved]: https://github.com/iamstarkov/es-deps-resolved
+[es-dep-unit]: https://github.com/iamstarkov/es-dep-unit
 
 ## License
 
