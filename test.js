@@ -25,8 +25,10 @@ const expected = [
   'q', 'fs', './local-cjs', 'globalImport',
 ];
 
-test('should esDepsFromString', t =>
-  t.same(esDepsFromString(input), expected));
+test('should esDepsFromString', t => t.deepEqual(
+  esDepsFromString(input),
+  expected
+));
 
 test('should throw on empty input', t => t.throws(() => { esDepsFromString(); }, TypeError));
 test('should throw on invalid input', t => t.throws(() => { esDepsFromString(2); }, TypeError));
