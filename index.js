@@ -1,12 +1,7 @@
 import { parse as _parse } from 'acorn';
 import { simple } from 'acorn/dist/walk';
 import R from 'ramda';
-
-// contract :: String -> Constructor -> a
-const contract = R.curry((name, ctor, param) => R.unless(
-  R.is(ctor),
-  () => { throw new TypeError(`\`${name}\` should be \`${R.type(ctor())}\`, but got \`${R.type(param)}\``); }
-)(param));
+import contract from 'neat-contract';
 
 const parse = input => _parse(input, { sourceType: 'module' });
 

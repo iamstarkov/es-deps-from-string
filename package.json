@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "acorn": "^3.0.4",
+    "neat-contract": "^1.0.0",
     "ramda": "^0.21.0"
   }
 }
