@@ -1,6 +1,6 @@
 {
   "name": "es-deps-from-string",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ECMAScript 2015+/CommonJS module dependencies array from string",
   "main": "index.es5.js",
   "files": [
