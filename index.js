@@ -3,7 +3,7 @@ import { simple } from 'acorn/dist/walk';
 import R from 'ramda';
 import contract from 'neat-contract';
 
-const parse = input => _parse(input, { sourceType: 'module' });
+const parse = input => _parse(input, { sourceType: 'module', allowHashBang: true });
 
 // es2015+
 const importValue = R.path(['source', 'value']);

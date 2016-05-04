@@ -30,5 +30,10 @@ test('should esDepsFromString', t => t.deepEqual(
   expected
 ));
 
+test('shebang', t => t.deepEqual(
+  esDepsFromString('#!/usr/bin/env node\n\nimport "./file.js" '),
+  ['./file.js']
+));
+
 test('should throw on empty input', t => t.throws(() => { esDepsFromString(); }, TypeError));
 test('should throw on invalid input', t => t.throws(() => { esDepsFromString(2); }, TypeError));
