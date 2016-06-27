@@ -25,10 +25,12 @@ const deps = ast => {
 };
 
 // esDepsFromString -> String -> Array[String]
-const esDepsFromString = R.unary(R.pipe(
-  contract('input', String),
-  parse,
-  deps
-));
+function esDepsFromString(input) {
+  return R.pipe(
+    contract('input', String),
+    parse,
+    deps
+  )(input);
+}
 
 export default esDepsFromString;
