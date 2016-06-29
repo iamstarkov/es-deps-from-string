@@ -20,20 +20,24 @@ require('globalImport');
 
 console.log('cjs');`;
 
-const expected = [
-  'out', './local',
-  'q', 'fs', './local-cjs', 'globalImport',
-];
+const shebangInput = `#!/usr/bin/env node
 
-test('should esDepsFromString', t => t.deepEqual(
-  esDepsFromString(input),
-  expected
-));
+import "./file.js"`;
 
-test('shebang', t => t.deepEqual(
-  esDepsFromString('#!/usr/bin/env node\n\nimport "./file.js" '),
-  ['./file.js']
-));
+test('should esDepsFromString', t => {
+  const actual = esDepsFromString(input);
+  const expected = [
+    'out', './local',
+    'q', 'fs', './local-cjs', 'globalImport',
+  ];
+  t.deepEqual(actual, expected);
+});
+
+test('shebang', t => {
+  const actual = esDepsFromString(shebangInput);
+  const expected = ['./file.js'];
+  t.deepEqual(actual, expected);
+});
 
 test('should throw on empty input', t => t.throws(() => { esDepsFromString(); }, TypeError));
 test('should throw on invalid input', t => t.throws(() => { esDepsFromString(2); }, TypeError));
