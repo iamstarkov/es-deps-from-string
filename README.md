@@ -1,5 +1,7 @@
 # es-deps-from-string
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamstarkov/es-deps-from-string.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
